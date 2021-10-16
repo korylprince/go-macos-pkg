@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<installer-gui-script minSpecVersion="1">
+    <pkg-ref id="{{.Identifier}}">
+        <bundle-version/>
+    </pkg-ref>
+    <options customize="never" require-scripts="false"/>
+    <choices-outline>
+        <line choice="default">
+            <line choice="{{.Identifier}}"/>
+        </line>
+    </choices-outline>
+    <choice id="default"/>
+    <choice id="{{.Identifier}}" visible="false">
+        <pkg-ref id="{{.Identifier}}"/>
+    </choice>
+    <pkg-ref id="{{.Identifier}}" version="{{.Version}}" onConclusion="none" installKBytes="0">#payload.pkg</pkg-ref>
+    <product id="{{.Identifier}}" version="{{.Version}}"/>
+</installer-gui-script>
