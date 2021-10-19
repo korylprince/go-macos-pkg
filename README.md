@@ -6,7 +6,7 @@
 
 # Caveats
 
-* Right now most of the heavy lifting is done by calling the `xar` and `cpio` utilities, as there aren't currently (2021) Go libraries that write xar or pre-SVR4 cpio files. The good news is those utilites are available on other OSs, unlike productsign/productbuild
+* Right now most of the heavy lifting is done by calling the `xar` utility, as there aren't currently (2021) Go libraries that write xar archives. The good news is `xar` is available on other OSs, unlike productsign/productbuild
 * Right now only payload-free (e.g. just runs `postinstall`) packages can be generated as that's all I currently need. It shouldn't be too hard for someone to add payload capabilities, though.
 
 # Usage
