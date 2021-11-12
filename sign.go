@@ -86,6 +86,7 @@ func (n nopReaderAtCloser) Close() error {
 }
 
 // VerifyPkg returns an error if the pkg cannot be verified with a complete chain to Apple's root CA
+// If pkg is not signed, ErrNotSigned is returned
 func VerifyPkg(pkg []byte) error {
 	buf := bytes.NewReader(pkg)
 	r, err := xar.NewReader(nopReaderAtCloser{buf}, int64(len(pkg)))
