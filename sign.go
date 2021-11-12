@@ -1,14 +1,19 @@
 package macospkg
 
 import (
+	"bytes"
 	"crypto/rand"
 	"crypto/rsa"
 	"crypto/x509"
+	"errors"
 	"fmt"
+	"io"
 	"os"
 	"os/exec"
 	"path"
 	"strconv"
+
+	xar "github.com/korylprince/goxar"
 )
 
 // SignPkg signs and returns the given pkg with the given certificate and key.
@@ -68,4 +73,39 @@ func SignPkg(pkg []byte, cert *x509.Certificate, key *rsa.PrivateKey) ([]byte, e
 	}
 
 	return signed, nil
+}
+
+type nopReaderAtCloser struct {
+	io.ReaderAt
+}
+
+func (n nopReaderAtCloser) Close() error {
+	return nil
+}
+
+// VerifyPkg returns an error if the pkg cannot be verified with a complete chain to Apple's root CA
+func VerifyPkg(pkg []byte) error {
+	buf := bytes.NewReader(pkg)
+	r, err := xar.NewReader(nopReaderAtCloser{buf}, int64(len(pkg)))
+	if err != nil {
+		return fmt.Errorf("could not open reader: %w", err)
+	}
+
+	if r.SignatureError != nil {
+		return fmt.Errorf("invalid signature: %w", r.SignatureError)
+	}
+	if r.SignatureCreationTime <= 0 {
+		return fmt.Errorf("invalid signature time: %d", r.SignatureCreationTime)
+	}
+
+	if len(r.Certificates) < 1 {
+		return errors.New("could not find certificates")
+	}
+
+	root := r.Certificates[len(r.Certificates)-1]
+	if !certAppleRootParsed.Equal(root) {
+		return errors.New("root certificate is not valid Apple root")
+	}
+
+	return nil
 }
