@@ -16,6 +16,8 @@ import (
 	xar "github.com/korylprince/goxar"
 )
 
+var ErrNotSigned = errors.New("package not signed")
+
 // SignPkg signs and returns the given pkg with the given certificate and key.
 // The certificate should be an "Apple Developer ID Installer" certificate.
 // See https://mackyle.github.io/xar/howtosign.html
@@ -95,7 +97,7 @@ func VerifyPkg(pkg []byte) error {
 		return fmt.Errorf("invalid signature: %w", r.SignatureError)
 	}
 	if r.SignatureCreationTime <= 0 {
-		return fmt.Errorf("invalid signature time: %d", r.SignatureCreationTime)
+		return ErrNotSigned
 	}
 
 	if len(r.Certificates) < 1 {
