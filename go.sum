@@ -1,5 +1,7 @@
 github.com/korylprince/go-cpio-odc v0.9.3 h1:MGpo1PcJN2ajysEoAhF34zR/Peevo4N+T+OmhDLIUvk=
 github.com/korylprince/go-cpio-odc v0.9.3/go.mod h1:1iHsjUXO64Hui0YsubGp0Tm/Uf04Iow2iy+1LJIarMw=
+github.com/korylprince/go-cpio-odc v0.9.4 h1:N0Afrp7Z5qCZF8cbpzF5CvyiC/KHK5IcLJwqm5MWpNU=
+github.com/korylprince/go-cpio-odc v0.9.4/go.mod h1:1iHsjUXO64Hui0YsubGp0Tm/Uf04Iow2iy+1LJIarMw=
 github.com/korylprince/goxar v0.0.0-20211111233330-e9f257bcdf25 h1:XVf+U+WekiGPPD27w7qI+0Pe8NehaTWPqRuO3BddefY=
 github.com/korylprince/goxar v0.0.0-20211111233330-e9f257bcdf25/go.mod h1:Lm6kfGMVHcpiBP6oOZd3ugv2EpQ/dOyW02tVIa3qo2Q=
 golang.org/x/crypto v0.0.0-20211108221036-ceb1ce70b4fa h1:idItI2DDfCokpg0N51B2VtiLdJ4vAuXC9fnCb2gACo4=
