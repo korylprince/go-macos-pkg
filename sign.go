@@ -95,14 +95,14 @@ func VerifyPkg(pkg []byte) error {
 	}
 
 	if r.SignatureError != nil {
+		if errors.Is(err, xar.ErrNoCertificates) {
+			return ErrNotSigned
+		}
 		return fmt.Errorf("invalid signature: %w", r.SignatureError)
-	}
-	if r.SignatureCreationTime <= 0 {
-		return ErrNotSigned
 	}
 
 	if len(r.Certificates) < 1 {
-		return errors.New("could not find certificates")
+		return ErrNotSigned
 	}
 
 	root := r.Certificates[len(r.Certificates)-1]
