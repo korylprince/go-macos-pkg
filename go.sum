@@ -4,6 +4,10 @@ github.com/korylprince/go-cpio-odc v0.9.4 h1:N0Afrp7Z5qCZF8cbpzF5CvyiC/KHK5IcLJw
 github.com/korylprince/go-cpio-odc v0.9.4/go.mod h1:1iHsjUXO64Hui0YsubGp0Tm/Uf04Iow2iy+1LJIarMw=
 github.com/korylprince/goxar v0.0.0-20211111233330-e9f257bcdf25 h1:XVf+U+WekiGPPD27w7qI+0Pe8NehaTWPqRuO3BddefY=
 github.com/korylprince/goxar v0.0.0-20211111233330-e9f257bcdf25/go.mod h1:Lm6kfGMVHcpiBP6oOZd3ugv2EpQ/dOyW02tVIa3qo2Q=
+github.com/korylprince/goxar v0.1.0 h1:uvQAfRAN4CyV4muBA4emRAexT3zgUuYTJiDKgydRjcA=
+github.com/korylprince/goxar v0.1.0/go.mod h1:Oyhj6xLhPKkFLYt4FeAFB8iElIYk2lnxxq7Z2GTeS9o=
+github.com/smallstep/pkcs7 v0.0.0-20231107075624-be1870d87d13 h1:qRxEt9ESQhAg1kjmgJ8oyyzlc9zkAjOooe7bcKjKORQ=
+github.com/smallstep/pkcs7 v0.0.0-20231107075624-be1870d87d13/go.mod h1:SoUAr/4M46rZ3WaLstHxGhLEgoYIDRqxQEXLOmOEB0Y=
 golang.org/x/crypto v0.0.0-20211108221036-ceb1ce70b4fa h1:idItI2DDfCokpg0N51B2VtiLdJ4vAuXC9fnCb2gACo4=
 golang.org/x/crypto v0.0.0-20211108221036-ceb1ce70b4fa/go.mod h1:GvvjBRRGRdwPK5ydBHafDWAxML/pGHZbMvKqRZ5+Abc=
 golang.org/x/net v0.0.0-20210226172049-e18ecbb05110/go.mod h1:m0MpNAwzfU5UDzcl9v0D8zg8gWTRqZa9RBIspLL5mdg=

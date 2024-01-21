@@ -94,21 +94,5 @@ func VerifyPkg(pkg []byte) error {
 		return fmt.Errorf("could not open reader: %w", err)
 	}
 
-	if r.SignatureError != nil {
-		if errors.Is(err, xar.ErrNoCertificates) {
-			return ErrNotSigned
-		}
-		return fmt.Errorf("invalid signature: %w", r.SignatureError)
-	}
-
-	if len(r.Certificates) < 1 {
-		return ErrNotSigned
-	}
-
-	root := r.Certificates[len(r.Certificates)-1]
-	if !certAppleRootParsed.Equal(root) {
-		return errors.New("root certificate is not valid Apple root")
-	}
-
-	return nil
+	return r.VerifyApplePkg()
 }
