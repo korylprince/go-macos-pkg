@@ -8,10 +8,14 @@ github.com/korylprince/goxar v0.1.0 h1:uvQAfRAN4CyV4muBA4emRAexT3zgUuYTJiDKgydRj
 github.com/korylprince/goxar v0.1.0/go.mod h1:Oyhj6xLhPKkFLYt4FeAFB8iElIYk2lnxxq7Z2GTeS9o=
 github.com/korylprince/goxar v0.1.1 h1:8h3eB0S5fH9lVE82GdQ6gvdwry2TzQmeSQonzg+k8eM=
 github.com/korylprince/goxar v0.1.1/go.mod h1:Oyhj6xLhPKkFLYt4FeAFB8iElIYk2lnxxq7Z2GTeS9o=
+github.com/korylprince/goxar v0.1.2 h1:Jm8HHdgQGGLUTQPt70Wzj4iWxJas6WmZLymJzUegFY8=
+github.com/korylprince/goxar v0.1.2/go.mod h1:I7hVRteLxFHZHMU4nLdCPTb8xkYDa5K9jcTYmrZ2XDo=
 github.com/smallstep/pkcs7 v0.0.0-20231107075624-be1870d87d13 h1:qRxEt9ESQhAg1kjmgJ8oyyzlc9zkAjOooe7bcKjKORQ=
 github.com/smallstep/pkcs7 v0.0.0-20231107075624-be1870d87d13/go.mod h1:SoUAr/4M46rZ3WaLstHxGhLEgoYIDRqxQEXLOmOEB0Y=
 golang.org/x/crypto v0.0.0-20211108221036-ceb1ce70b4fa h1:idItI2DDfCokpg0N51B2VtiLdJ4vAuXC9fnCb2gACo4=
 golang.org/x/crypto v0.0.0-20211108221036-ceb1ce70b4fa/go.mod h1:GvvjBRRGRdwPK5ydBHafDWAxML/pGHZbMvKqRZ5+Abc=
+golang.org/x/exp v0.0.0-20240119083558-1b970713d09a h1:Q8/wZp0KX97QFTc2ywcOE0YRjZPVIx+MXInMzdvQqcA=
+golang.org/x/exp v0.0.0-20240119083558-1b970713d09a/go.mod h1:idGWGoKP1toJGkd5/ig9ZLuPcZBC3ewk7SzmH0uou08=
 golang.org/x/net v0.0.0-20210226172049-e18ecbb05110/go.mod h1:m0MpNAwzfU5UDzcl9v0D8zg8gWTRqZa9RBIspLL5mdg=
 golang.org/x/sys v0.0.0-20201119102817-f84b799fce68/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20210615035016-665e8c7367d1/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
